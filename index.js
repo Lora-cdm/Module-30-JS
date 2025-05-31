@@ -21,3 +21,8 @@ var text = document.getElementById('textid');
 btn.onclick=function(){
     text.innerHTML=input.value;
 }
+
+var input2 = document.querySelector('#input2')
+var input3 = document.querySelector('#input3')
+var btn2 = document.querySelector('#btn2id')
+var answer = document.querySelector('#answer')
