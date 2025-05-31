@@ -32,7 +32,7 @@
     }
 
     input[type="text"]:focus {
-        border-color: #007BFF;
+        border-color: #73a0d1;
         outline: none;
     }
 
@@ -40,7 +40,7 @@
         width: 95%;
         padding: 12px;
         margin: 10px 0;
-        background-color: #007BFF;
+        background-color: #73a0d1;;
         color: white;
         border: none;
         border-radius: 8px;
@@ -50,7 +50,7 @@
     }
 
     button:hover {
-        background-color: #0056b3;
+        background-color: #73a0d1;;
     }
 
     h1 {

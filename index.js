@@ -18,7 +18,13 @@ var btn = document.getElementById('btnid');
 var text = document.getElementById('textid');
 
 btn.onclick = function() {
-    text.innerHTML = input.value;
+    if(input.value>10){
+        text.innerHTML = "Input value is bigger than 10"
+    } else if(input.value=10){
+        text.innerHTML = "Input value is equal to 10"
+    } else {
+        text.innerHTML = "Input value is smaller than 10"
+    }
 }
 
 var input2 = document.querySelector('#input2');
