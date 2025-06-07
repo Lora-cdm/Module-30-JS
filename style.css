@@ -58,3 +58,45 @@
         color: #333;
         margin-top: 20px;
     }
+
+    h2#clock {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+picture img#Clockimage {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+    margin: 20px 0 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+select {
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #73a0d1;
+    outline: none;
+}
+
+#SaveButton {
+    margin-top: 20px;
+}
