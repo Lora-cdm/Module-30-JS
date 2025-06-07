@@ -78,3 +78,20 @@ function changeImage() {
     imageHTML.src = image;
     console.log(imageHTML.src)
 }
+
+function updateClock() {
+
+var WakeUpTimeSelector = document.getElementById('WakeUpTimeSelector');
+wakeuptime = WakeUpTimeSelector.value;
+
+var dsTimeSelector = document.getElementById('ClassTimeSelector');
+dstime = dsTimeSelector.value;
+
+var sleeptimeselector = document.getElementById('SleepTimeSelector');
+sleeptime = sleeptimeselector.value;
+
+var saveButton = document.getElementById("SaveButton");
+
+saveButton.addEventListener("click", updateClock)
+
+}
