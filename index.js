@@ -1,4 +1,3 @@
-
 var x = 5;
 if (x > 2) {
     console.log("X eshte me i madh se 2");
@@ -58,40 +57,38 @@ function showCurrentTime(){
 var oneSecond = 1000;
 setInterval(showCurrentTime, oneSecond);
 
+// Declare these at the top so they're accessible everywhere
+var wakeuptime = document.getElementById('WakeUpTimeSelector').value;
+var dstime = document.getElementById('ClassTimeSelector').value;
+var sleeptime = document.getElementById('SleepTimeSelector').value;
+
+// Fix image element ID
 function changeImage() {
     var time = new Date().getHours();
-    console.log(time);
-
     var image = "img/ds_clock.png";
-    var imageHTML = document.getElementById("timeImage");
+    var imageHTML = document.getElementById("Clockimage"); // Corrected ID
 
-    if(time == wakeuptime){
+    if (time == wakeuptime) {
         image = "img/morning.gif";
-        console.log("morning");
-    } else if(time == dstime){
+    } else if (time == dstime) {
         image = "img/class.gif";
-
-    } else if(time == sleeptime){
+    } else if (time == sleeptime) {
         image = "img/night.gif";
     }
 
     imageHTML.src = image;
-    console.log(imageHTML.src)
 }
 
-function updateClock() {
-
-var WakeUpTimeSelector = document.getElementById('WakeUpTimeSelector');
-wakeuptime = WakeUpTimeSelector.value;
-
-var dsTimeSelector = document.getElementById('ClassTimeSelector');
-dstime = dsTimeSelector.value;
-
-var sleeptimeselector = document.getElementById('SleepTimeSelector');
-sleeptime = sleeptimeselector.value;
-
-var saveButton = document.getElementById("SaveButton");
-
-saveButton.addEventListener("click", updateClock)
-
+// Update the selected times and image when Save is clicked
+function saveTimesAndUpdateImage() {
+    wakeuptime = document.getElementById('WakeUpTimeSelector').value;
+    dstime = document.getElementById('ClassTimeSelector').value;
+    sleeptime = document.getElementById('SleepTimeSelector').value;
+    changeImage();
 }
+
+// Set up the event listener ONCE
+document.getElementById("SaveButton").addEventListener("click", saveTimesAndUpdateImage);
+
+// Optionally, update image every second with the clock
+setInterval(changeImage, 1000);
