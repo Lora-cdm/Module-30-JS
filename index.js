@@ -35,3 +35,22 @@ var answer = document.querySelector('#answer');
 btn2.addEventListener("click", function() {
     answer.innerHTML = parseInt(input2.value) + parseInt(input3.value); 
 });
+
+function showCurrentTime(){
+    var clock = document.getElementById('clock');
+    var currentTime = new Date();
+
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+
+    var meridian = "AM"
+    
+    if(hours>=noon){
+        meridian = "PM";
+
+    }
+    var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian;
+    clock.innerText = clockTime;
+
+}
