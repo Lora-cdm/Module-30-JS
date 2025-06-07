@@ -53,4 +53,28 @@ function showCurrentTime(){
     var clockTime = hours + ":" + minutes + ":" + seconds + " " + meridian;
     clock.innerText = clockTime;
 
+};
+
+var oneSecond = 1000;
+setInterval(showCurrentTime, oneSecond);
+
+function changeImage() {
+    var time = new Date().getHours();
+    console.log(time);
+
+    var image = "img/ds_clock.png";
+    var imageHTML = document.getElementById("timeImage");
+
+    if(time == wakeuptime){
+        image = "img/morning.gif";
+        console.log("morning");
+    } else if(time == dstime){
+        image = "img/class.gif";
+
+    } else if(time == sleeptime){
+        image = "img/night.gif";
+    }
+
+    imageHTML.src = image;
+    console.log(imageHTML.src)
 }
